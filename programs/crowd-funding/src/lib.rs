@@ -1,6 +1,6 @@
 use anchor_lang::prelude::*;
 
-declare_id!("GqnNEhcmYVAUjKLXSWZLQR7nXSeTgAG56Fw1ADs4DToT");
+declare_id!("CRL1NdEMLm5ccWQGGHRMQMWPA2iN6Au51S37QeqmEVhB");
 
 #[program]
 pub mod crowd_funding {
@@ -41,7 +41,7 @@ pub mod crowd_funding {
             amount
         );
 
-        let _ = anchor_lang::solana_program::program::invoke(
+        anchor_lang::solana_program::program::invoke(
             &ix, &[
                 ctx.accounts.user.to_account_info(),
                 ctx.accounts.campaign.to_account_info()
